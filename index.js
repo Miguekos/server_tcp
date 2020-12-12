@@ -25,6 +25,6 @@ server.on('connection', function (socket) {
 
     // The server can also receive data from the client by reading from its socket.
     socket.on('data', function (chunk) {
-        console.log(`Data received from client: ${chunk.toString()`});
+        console.log(`Data received from client: ${chunk.toString()}`);
     });
 });
