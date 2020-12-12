@@ -1,6 +1,6 @@
 var net = require('net');
 
-var HOST = 'localhost';
+var HOST = "0.0.0.0";
 var PORT = 4040;
 
 var server = net.createServer();
