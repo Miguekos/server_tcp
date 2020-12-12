@@ -11,10 +11,11 @@ server.on('connection', function (sock) {
     // sock.write("TCP sending message : 1");
     console.log('Server listening on ' + server.address().address + ':' +
         server.address().port);
-    server.on('data', function (chunk) {
-        console.log(`Data received from the server: ${chunk.toString()}.`);
-
-        // Request an end to the connection after the data has been received.
-        server.end();
-    });
 }).listen(PORT, HOST);
+
+server.on('data', function (chunk) {
+    console.log(`Data received from the server: ${chunk.toString()}.`);
+
+    // Request an end to the connection after the data has been received.
+    server.end();
+});
