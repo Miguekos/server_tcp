@@ -11,7 +11,7 @@ const server = new Net.Server();
 // The server listens to a socket for a client to make a connection request.
 // Think of a socket as an end point.
 server.listen(port, function () {
-    console.log(`Server listening for connection requests on socket localhost:${port}`.);
+    console.log(`Server listening for connection requests on socket localhost:${port}`);
 });
 
 // When a client requests a connection with the server, the server creates a new
