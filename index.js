@@ -14,16 +14,22 @@ client.connect({ port: port, host: host }), function () {
 
     // The client can now send data to the server by writing to its socket.
     // client.write('Hello, server.');
+    client.on('data', function (chunk) {
+        console.log(`Data received from the server: ${chunk.toString()}.`);
+
+        // Request an end to the connection after the data has been received.
+        client.end();
+    });
 };
 
 // The client can also receive data from the server by reading from its socket.
-client.on('data', function (chunk) {
-    console.log(`Data received from the server: ${chunk.toString()}.`);
+// client.on('data', function (chunk) {
+//     console.log(`Data received from the server: ${chunk.toString()}.`);
 
-    // Request an end to the connection after the data has been received.
-    client.end();
-});
+//     // Request an end to the connection after the data has been received.
+//     client.end();
+// });
 
-client.on('end', function () {
-    console.log('Requested an end to the TCP connection');
-});
+// client.on('end', function () {
+//     console.log('Requested an end to the TCP connection');
+// });
