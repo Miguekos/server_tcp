@@ -2,7 +2,7 @@
 const Net = require('net');
 // The port number and hostname of the server.
 const port = 4040;
-const host = '0.0.0.0';
+const host = '207.244.232.99';
 
 // Create a new TCP client.
 const client = new Net.Socket();
